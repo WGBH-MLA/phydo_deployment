@@ -2,7 +2,7 @@
 
 This project contains the deployment scripts and configuration for deploying
 the Phydo website. The Phydo website code
-repository is at http://github.com/WGBH/aapb2.
+repository is at http://github.com/WGBH/hydradam2-app.
 
 ### Overview of tools used
 
