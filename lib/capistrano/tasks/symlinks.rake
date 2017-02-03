@@ -1,12 +1,5 @@
 # cap demo symlinks
 
-
-set :sudo_symlinks, {
-  "/srv/www/aapb/shared/jetty/solr/blacklight-core/data" => "/mnt/aapb-solr-data/data"
-}
-
-
-
 task :symlinks do
   # default task for symlinks namespace is symlinks:no_sudo
   invoke "symlinks:all"

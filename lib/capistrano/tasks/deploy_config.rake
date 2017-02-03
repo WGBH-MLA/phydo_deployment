@@ -10,17 +10,9 @@ namespace :deploy do
 
   namespace :config do
     task :all do
-      invoke "deploy:config:ci"
       invoke "deploy:config:database"
       invoke "deploy:config:secrets"
     end
-
-    task :ci => [:ensure_shared_config_dir] do
-      on roles(:app) do
-        upload! './config/ci.yml', "#{shared_path}/config/ci.yml"
-      end
-    end
-
 
     task :database => [:ensure_shared_config_dir] do
       on roles(:app) do
@@ -34,7 +26,4 @@ namespace :deploy do
       end
     end
   end
-
-
-
 end
