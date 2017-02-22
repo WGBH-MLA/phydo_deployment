@@ -2,14 +2,14 @@
 lock '3.5.0'
 
 set :application, 'phydo'
-set :repo_url, 'https://github.com/WGBH/hydradam2-app.git'
+set :repo_url, 'https://github.com/WGBH/phydo.git'
 set :deploy_to, '/var/www/phydo'
 
 # If the branch is not set with an env var, then ask for it.
 if ENV['PHYDO_BRANCH']
   set :branch, ENV['PHYDO_BRANCH']
 else
-  ask :branch, 'master'
+  ask :branch, 'wgbh-master'
 end
 
 # Default value for :log_level is :debug
